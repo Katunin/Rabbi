@@ -11,6 +11,7 @@
     <link href="css/bootstrap.css" rel="stylesheet">
     <!-- jQuery style -->
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="css/slicknav.css">
 
 
     <link rel="stylesheet" href="css/font-awesome.css">
@@ -38,7 +39,7 @@
 
 
         <div class="header-nav">
-            <ul>
+            <ul id="menu">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Biography</a></li>
                 <li><a href="#">News</a></li>
@@ -49,11 +50,19 @@
         </div>
 
         <div class="additional-nav flex-container">
-            <a href="#"><span class="fa fa-search" aria-hidden="true"></span></a>
+            <a href="#search"><span class="fa fa-search" aria-hidden="true"></span></a>
             <ul class="flex-container">
                 <li><a href="#">ENG</a></li>
                 <li><a href="#">RUS</a></li>
             </ul>
+        </div>
+
+        <!-- Search Form -->
+        <div id="search">
+            <span class="close">X</span>
+            <form role="search" id="searchform" action="/search" method="get">
+                <input value="" name="q" type="search" placeholder="type to search"/>
+            </form>
         </div>
 
     </div> <!-- /.container -->
@@ -76,7 +85,7 @@
         <div class="container-fluid">
             <div class="row">
 
-                <div class="col-md-8">
+                <div class="col-sm-8">
                     <section class="news grey-bg">
                         <span class="title">News</span>
                         <div class="main-article">
@@ -87,19 +96,25 @@
                             <span class="date">August 29th</span>
                         </div>
                         <div class="secondary-articles">
-                            <div class="col-md-6">
-                                <a href="#"><img src="img/news-item-2.jpg" alt=""></a>
-                        <a href="#"><span class="tag">People</span></a>
-                        <a href="#"><span class="caption">Chatbots can infuse your website with a much...</span></a>
-                        <p class="description">There’s no question that people continue to spend a greater percentage of their lives comm...</p>
-                        <span class="date">July 11th</span>
+                            <div class="secondary-articles-item">
+                                <div class="col-sm-6">
+
+                                    <a href="#"><img src="img/news-item-2.jpg" alt=""></a>
+                                    <a href="#"><span class="tag">People</span></a>
+                                    <a href="#"><span class="caption">Chatbots can infuse your website with a much...</span></a>
+                                    <p class="description">There’s no question that people continue to spend a greater percentage of their lives comm...</p>
+                                    <span class="date">July 11th</span>
+                                </div>
                             </div>
-                            <div class="col-md-6">
-                                <a href="#"><img src="img/news-item-3.jpg" alt=""></a>
-                        <a href="#"><span class="tag">People</span></a>
-                        <a href="#"><span class="caption">The iconized web puts</span></a>
-                        <p class="description">On the pre-app environment of web design, icons generally played a limited role in the event that they were used...</p>
-                        <span class="date">July 6th</span>
+                            <div class="secondary-articles-item">
+                                <div class="col-sm-6">
+
+                                    <a href="#"><img src="img/news-item-3.jpg" alt=""></a>
+                                    <a href="#"><span class="tag">People</span></a>
+                                    <a href="#"><span class="caption">The iconized web puts</span></a>
+                                    <p class="description">On the pre-app environment of web design, icons generally played a limited role in the event that they were used...</p>
+                                    <span class="date">July 6th</span>
+                                </div>
                             </div>
                         </div>
                         <div class="row text-center">
@@ -108,7 +123,7 @@
                     </section>
                 </div>
 
-                <div class="col-md-4">
+                <div class="col-sm-4">
                     <aside class="main-aside">
                         <section class="lessons dark-grey-bg">
                             <span class="title">Lessons</span>
@@ -179,56 +194,58 @@ will support...</span>
                         <!-- Wrapper for slides -->
                         <div class="carousel-inner" role="listbox">
                             <div class="item active">
-                                <div class="col-md-4">
+                                <div class="col-sm-4">
                                     <a href="#"><img src="img/news-item-2.jpg" alt=""></a>
                                     <a href="#"><span class="caption">Chatbots can infuse your website with a much...</span></a>
                                     <p class="description">There’s no question that people continue to spend a greater percentage of their lives comm...</p>
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-sm-4">
                                     <a href="#"><img src="img/news-item-3.jpg" alt=""></a>
                                     <a href="#"><span class="caption">The iconized web puts</span></a>
                                     <p class="description">On the pre-app environment of web design, icons generally played a limited role in the event that they were used...</p>
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-sm-4">
+                                    <a href="#"><img src="img/news-item-3.jpg" alt=""></a>
+                                    <a href="#"><span class="caption">The iconized web puts</span></a>
+                                    <p class="description">On the pre-app environment of web design, icons generally played a limited role in the event that they were used...</p>
+                                </div>
+                            </div>
+                            <!--
+                            <div class="item">
+                                <div class="col-sm-4">
+                                    <a href="#"><img src="img/news-item-2.jpg" alt=""></a>
+                                    <a href="#"><span class="caption">Chatbots can infuse your website with a much...</span></a>
+                                    <p class="description">There’s no question that people continue to spend a greater percentage of their lives comm...</p>
+                                </div>
+                                <div class="col-sm-4">
+                                    <a href="#"><img src="img/news-item-3.jpg" alt=""></a>
+                                    <a href="#"><span class="caption">The iconized web puts</span></a>
+                                    <p class="description">On the pre-app environment of web design, icons generally played a limited role in the event that they were used...</p>
+                                </div>
+                                <div class="col-sm-4">
                                     <a href="#"><img src="img/news-item-3.jpg" alt=""></a>
                                     <a href="#"><span class="caption">The iconized web puts</span></a>
                                     <p class="description">On the pre-app environment of web design, icons generally played a limited role in the event that they were used...</p>
                                 </div>
                             </div>
                             <div class="item">
-                                <div class="col-md-4">
+                                <div class="col-sm-4">
                                     <a href="#"><img src="img/news-item-2.jpg" alt=""></a>
                                     <a href="#"><span class="caption">Chatbots can infuse your website with a much...</span></a>
                                     <p class="description">There’s no question that people continue to spend a greater percentage of their lives comm...</p>
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-sm-4">
                                     <a href="#"><img src="img/news-item-3.jpg" alt=""></a>
                                     <a href="#"><span class="caption">The iconized web puts</span></a>
                                     <p class="description">On the pre-app environment of web design, icons generally played a limited role in the event that they were used...</p>
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-sm-4">
                                     <a href="#"><img src="img/news-item-3.jpg" alt=""></a>
                                     <a href="#"><span class="caption">The iconized web puts</span></a>
                                     <p class="description">On the pre-app environment of web design, icons generally played a limited role in the event that they were used...</p>
                                 </div>
                             </div>
-                            <div class="item">
-                                <div class="col-md-4">
-                                    <a href="#"><img src="img/news-item-2.jpg" alt=""></a>
-                                    <a href="#"><span class="caption">Chatbots can infuse your website with a much...</span></a>
-                                    <p class="description">There’s no question that people continue to spend a greater percentage of their lives comm...</p>
-                                </div>
-                                <div class="col-md-4">
-                                    <a href="#"><img src="img/news-item-3.jpg" alt=""></a>
-                                    <a href="#"><span class="caption">The iconized web puts</span></a>
-                                    <p class="description">On the pre-app environment of web design, icons generally played a limited role in the event that they were used...</p>
-                                </div>
-                                <div class="col-md-4">
-                                    <a href="#"><img src="img/news-item-3.jpg" alt=""></a>
-                                    <a href="#"><span class="caption">The iconized web puts</span></a>
-                                    <p class="description">On the pre-app environment of web design, icons generally played a limited role in the event that they were used...</p>
-                                </div>
-                            </div>
+                            -->
                         </div>
 
                         <!-- Controls -->
@@ -262,7 +279,7 @@ will support...</span>
     <section class="literature">
         <div class="container-fluid">
             <div class="row text-center">
-                <div class="col-md-6">
+                <div class="col-sm-6">
                     <div class="quote blue-bg">
                         <span class="title">Quote of the day</span>
                         <p class="quote-text">We should feel enlarged by
@@ -270,7 +287,7 @@ will support...</span>
                         <button type="submit" class="btn blue-btn">View all</button>
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-sm-6">
                     <div class="literature-items grey-bg">
                         <span class="title">Books</span>
                         <div id="book-slider" class="carousel slide" data-ride="carousel">
@@ -367,6 +384,7 @@ will support...</span>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="js/bootstrap.min.js"></script>
 
+<script src="js/jquery.slicknav.min.js"></script>
 
 <script src="js/plugins.min.js"></script>
 </body>
