@@ -65,6 +65,10 @@ button {
     line-height: 1.3em;
     color: #fffefe;
 }
+.page-title {
+    font-size: 50px;
+    color: #ffffff;
+}
 .title {
     color: #0040c0;
     font-size: 24px;
@@ -76,7 +80,7 @@ button {
     text-align: center;
 }
 .title:after {
-    content: '';
+    content: "";
     display: inline-block;
     margin: 0 0 8px 20px;
     width: 60px;
@@ -85,7 +89,7 @@ button {
     background-color: #0040c0;
 }
 .title:before {
-    content: '';
+    content: "";
     display: inline-block;
     margin: 0 20px 8px 0;
     width: 60px;
@@ -147,6 +151,17 @@ button {
     background-color: #0040c0;
     border: 1px solid #fff;
 }
+.page-pagination .previous-page {
+    font-size: 18px;
+    line-height: .9em;
+    color: #010101;
+}
+.page-pagination .previous-page span {
+    font-size: 18px;
+    color: #000000;
+    margin-right: 20px;
+}
+
 
 @media (max-width: 991px) {
     .title {
@@ -183,6 +198,14 @@ button {
     color: #fff;
     z-index: 999;
     border-bottom: 1px solid #fffefe;
+    transition: .3s ease-in;
+}
+.header.sticky {
+    position: fixed;
+    top: 0;
+    background-color: #000;
+    padding: 10px 30px;
+    border-bottom: none;
 }
 
 .header-nav {
@@ -205,6 +228,11 @@ button {
     line-height: 17px;
 }
 .header-nav li a:hover {
+    border-bottom: 1px solid #fff;
+    padding-bottom: 10px;
+}
+.header-nav li a.active,
+.menu li.current-menu-item a {
     border-bottom: 1px solid #fff;
     padding-bottom: 10px;
 }
@@ -269,10 +297,18 @@ button {
 .additional-nav .fa-search {
     margin-right: 22px;
 }
-.additional-nav ul li + li:before {
-    content: '|';
+.languages li + li:before {
+    content: "|";
     padding: 0 10px;
+    color: #ffffff;
 }
+.languages li a {
+    color: #a1a1a1;
+}
+.languages li a.active {
+    color: #ffffff;
+}
+
 
 @media (max-width: 991px) {
     .header {
@@ -323,7 +359,6 @@ button {
 
 /* ===== INNER START ===== */
 .inner {
-    background-image: url(../img/top-bg.jpg);
     background-size: cover;
     height: 100vh;
     padding-top: 71px;
@@ -332,7 +367,7 @@ button {
 }
 
 .inner::before {
-    content: '';
+    content: "";
     display: inline-block;
     height: 100%;
     vertical-align: middle;
@@ -675,6 +710,19 @@ ul.social-links li + li {
     }
 }
 /* ===== FOOTER END ===== */
+.information {
+    padding: 90px 0 110px;
+}
+.information p {
+    color: #555555;
+    font-size: 25px;
+}
+.information p + p {
+    margin-top: 25px;
+}
+.page-pagination {
+    margin-top: 70px;
+}
 
 
 

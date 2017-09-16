@@ -17,13 +17,17 @@ $( function() {
         }
     });
 
-    // Slick menu
-    var options = {
-        offset: 400
-    }
-    var header = new Headhesive('.header' , options);
 
+    // sticky header
 
+    $('#header').removeClass('sticky');
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 130) {
+            $('#header').addClass('sticky').fadeIn('fast');
+        } else {
+            $('#header').removeClass('sticky').fadeIn('fast');
+        };
+    });
 
 });
 

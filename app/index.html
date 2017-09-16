@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Main page</title>
+    <title>Home page</title>
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.css" rel="stylesheet">
@@ -28,19 +28,19 @@
 </head>
 <body>
 <!-- HEADER START -->
-<div class="header">
+<div id="header" class="header">
     <div class="container-fluid flex-container justify-sp-between">
 
         <div class="logo">
             <a href="#">
-                <img src="img/logo.png" alt="Wow Catering logo">
+                <img src="img/logo.png" alt="Ravin logo">
             </a>
         </div> <!-- ./logo -->
 
 
         <div class="header-nav">
             <ul id="menu">
-                <li><a href="#">Home</a></li>
+                <li><a href="#" class="active">Home</a></li>
                 <li><a href="#">Biography</a></li>
                 <li><a href="#">News</a></li>
                 <li><a href="#">Lessons</a></li>
@@ -51,8 +51,8 @@
 
         <div class="additional-nav flex-container">
             <a href="#search"><span class="fa fa-search" aria-hidden="true"></span></a>
-            <ul class="flex-container">
-                <li><a href="#">ENG</a></li>
+            <ul class="flex-container languages">
+                <li><a href="#" class="active">ENG</a></li>
                 <li><a href="#">RUS</a></li>
             </ul>
         </div>
@@ -73,7 +73,7 @@
 <main>
 
     <div class="main">
-        <div class="inner">
+        <div class="inner" style="background-image: url(../img/top-bg.jpg)">
             <div class="inner-content">
                 <p class="quote-text">“We should feel enlarged by<br>the people who are different.”</p>
             </div>
@@ -371,8 +371,7 @@ will support...</span>
 <!-- Adaptive menu -->
 <script src="js/jquery.slicknav.min.js"></script>
 
-<!-- Slick menu -->
-<script src="js/headhesive.min.js"></script>
+
 
 <script src="js/plugins.min.js"></script>
 </body>
