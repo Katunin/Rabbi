@@ -17,6 +17,13 @@ $( function() {
         }
     });
 
+    // Slick menu
+    var options = {
+        offset: 400
+    }
+    var header = new Headhesive('.header' , options);
+
+
 
 });
 

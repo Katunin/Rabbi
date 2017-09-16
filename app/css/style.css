@@ -211,7 +211,7 @@ button {
 
 .header-nav li a {
     font-size: 18px;
-    color: #fffefe;
+    color: rgba(255, 255, 255, .7);
     line-height: 17px;
 }
 .header-nav li a:hover {
@@ -290,6 +290,18 @@ button {
     padding: 0 10px;
 }
 
+.headhesive {
+    background-color: #000;
+    position: fixed;
+    width: 100%;
+    border: none;
+    transform: translateY(-100%);
+    transition:  .2s linear;
+}
+.headhesive--stick {
+    transform: translateY(0);
+}
+
 @media (max-width: 991px) {
     .header {
         padding: 15px 10px;
@@ -333,6 +345,9 @@ button {
             -ms-flex-align: center;
                 align-items: center;
         margin-left: auto;
+    }
+    .headhesive {
+        display: none;
     }
 }
 @media (max-width: 473px) {
@@ -673,34 +688,6 @@ button {
 }
 /* ===== LITERATURE END ===== */
 
-/* ===== SUBSCRIPTION START ===== */
-.subscription {
-    padding: 110px 0 80px;
-}
-.subscription span {
-    color: #000;
-}
-.subscription input[name="userEmail"] {
-    width: 395px;
-    border-bottom: 1px solid #000;
-    line-height: 47px;
-    color: #000000;
-    text-align: center;
-}
-
-
-@media (max-width: 991px) {
-    .subscription {
-        padding: 60px 0 40px;
-    }
-}
-@media (max-width: 767px) {
-    .subscription input[name="userEmail"] {
-        width: 100%;
-    }
-
-}
-/* ===== SUBSCRIPTION END ===== */
 
 /* ===== FOOTER START ===== */
 footer {
