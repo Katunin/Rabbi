@@ -65,9 +65,17 @@ button {
     line-height: 1.3em;
     color: #fffefe;
 }
-.page-title {
+.inner-title {
     font-size: 50px;
     color: #ffffff;
+}
+.heading {
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 45px;
+    color: #0040c0;
+    border-bottom: 1px solid #0040c0;
+    padding-bottom: 20px;
 }
 .title {
     color: #0040c0;
@@ -162,6 +170,31 @@ button {
     margin-right: 20px;
 }
 
+.page-navigation {
+    text-align: center;
+}
+.pagination span {
+    margin: 0 35px;
+}
+.pagination li + li {
+    margin-left: 15px;
+}
+.pagination > li > a, .pagination > li > span {
+    color: #000000;
+    border: none;
+    background-color: transparent;
+}
+.pagination > li > a:hover, .pagination > li > span:hover, .pagination > li > a:focus, .pagination > li > span:focus {
+    border: none;
+    background-color: transparent;
+    color: #0040c0;
+}
+.pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus {
+    border: none;
+    background-color: transparent;
+    color: #0040c0;
+}
+
 
 @media (max-width: 991px) {
     .title {
@@ -199,6 +232,9 @@ button {
     z-index: 999;
     border-bottom: 1px solid #fffefe;
     transition: .3s ease-in;
+}
+.header.black-bg {
+    background-color: #000;
 }
 .header.sticky {
     position: fixed;
@@ -710,6 +746,8 @@ ul.social-links li + li {
     }
 }
 /* ===== FOOTER END ===== */
+
+
 .information {
     padding: 90px 0 110px;
 }
@@ -724,5 +762,76 @@ ul.social-links li + li {
     margin-top: 70px;
 }
 
-
-
+.lesson-page {
+    padding: 230px 0 120px;
+}
+.lesson-page .nav-tabs {
+    max-width: 660px;
+    margin: 0 auto;
+}
+.lesson-page .title {
+    margin-top: 80px;
+}
+.filter_tabs {
+    max-width: 660px;
+    margin: 100px auto 0;
+    color: #a1a1a1;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #a1a1a1;
+    cursor: pointer;
+}
+.filter_tabs li {
+    display: inline-block;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+.filter_tabs li:hover {
+    color: #000000;
+}
+.filter_tabs li + li {
+    margin-left: 10px;
+}
+.lesson-page .lesson-item img {
+    border-radius: 3px;
+}
+.lesson-page .definition {
+    padding: 20px 0;
+}
+.lesson-item-menu {
+    float: right;
+    color: #a1a1a1;
+    font-size: 23px;
+}
+.lesson-item-menu li a:hover {
+    color: #000000;
+}
+.lesson-item-menu li {
+    display: inline-block;
+}
+.lesson-item-menu li + li {
+    margin-left: 10px;
+}
+.lesson-page .tag {
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 35px;
+}
+.lesson-item-title {
+    font-size: 20px;
+    color: #010101;
+    font-weight: bold;
+}
+.lesson-page .definition .description {
+    font-weight: normal;
+    margin-top: 25px;
+}
+.lesson-page .lesson-item-img {
+    margin-bottom: 10px;
+}
+.lesson-page .caption {
+    margin-top: 15px;
+    white-space: normal;
+}
+.lessons-grid .row + .row {
+    margin-top: 35px;
+}
