@@ -40,6 +40,9 @@ button {
 /* RESET END */
 
 /* ===== DEFAULT CLASSES START ===== */
+.clearfix {
+    clear: both;
+}
 .flex-container {
     display: flex;
 }
@@ -194,6 +197,20 @@ button {
     background-color: transparent;
     color: #0040c0;
 }
+
+.default-list {
+    color: #555;
+    padding: 25px 75px;
+    font-size: 25px;
+}
+.default-list li + li {
+    margin-top: 25px;
+}
+.default-list li:before {
+    content: '•';
+    margin-right: 60px;
+}
+
 
 
 @media (max-width: 991px) {
@@ -457,13 +474,17 @@ button {
     max-width: 300px;
     margin: 0 auto;
 }
+.lesson-item {
+    margin-top: 50px;
+}
 .lesson-item + .lesson-item {
     margin-top: 61px;
 }
 .lesson-item-img {
     position: relative;
 }
-.lesson-item-img .play-icon {
+.lesson-item-img .play-icon,
+.inner .play-icon {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -483,14 +504,17 @@ button {
     z-index: 2;
     display: none;
 }
+.inner:hover .play-icon,
 .lesson-item:hover .play-icon {
     display: block;
     transition: all 10s;
 }
+.inner .play-icon:before,
 .lesson-item-img .play-icon:before {
     position: absolute;
     left: 40%;
 }
+.inner .play-icon:after,
 .lesson-item-img .play-icon:after {
     content: "";
     position: absolute;
@@ -800,7 +824,7 @@ ul.social-links li + li {
     border-radius: 3px;
 }
 .lesson-page .definition {
-    padding: 20px 0;
+    padding: 20px 10px;
 }
 .lesson-item-menu {
     float: right;
@@ -840,7 +864,11 @@ ul.social-links li + li {
 .lessons-grid .row + .row {
     margin-top: 35px;
 }
-
+.information .lesson-item-menu {
+    position: absolute;
+    right: 30px;
+    top: -50px;
+}
 
 @media (max-width: 991px) {
 
@@ -852,6 +880,13 @@ ul.social-links li + li {
     }
     .lesson-item .date {
         margin: 30px 0;
+    }
+    .default-list {
+        padding: 0;
+    }
+    .default-list li:before {
+        content: '•';
+        margin-right: 10px;
     }
 }
 
@@ -867,6 +902,9 @@ ul.social-links li + li {
 }
 .news-page .title {
     margin-top: 80px;
+}
+.news-item {
+    margin-top: 50px;
 }
 .news-page .news-item img {
     border-radius: 3px;
@@ -927,6 +965,150 @@ ul.social-links li + li {
     }
 }
 /* ===== NEWS PAGE END ===== */
+
+/* ===== GALLERY START ===== */
+.gallery-page {
+    padding: 230px 0 120px;
+}
+.gallery-item {
+    margin-top: 50px;
+    overflow: hidden;
+}
+.gallery-item .views-count {
+    margin-top: 15px;
+}
+.gallery-item .date {
+    float: left;
+    margin-top: 15px;
+}
+.gallery-item .views-count {
+    float: right;
+    color: #a7a6a6;
+    font-style: italic;
+}
+.gallery-item-img {
+    border-radius: 5px;
+}
+.gallery-item-img img {
+    transition: transform .3s ease-in-out;
+}
+.gallery-item-img:hover img {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+    border-radius: 5px;
+}
+@media (max-width: 767px) {
+    .gallery-grid {
+        padding: 0 100px;
+    }
+    .gallery-item-img {
+        overflow: hidden;
+    }
+    .gallery-item-img img {
+        width: 100%;
+    }
+}
+/* ===== GALLERY END ===== */
+
+
+
+/* ===== BOOKS START ===== */
+.books-store-page {
+    padding: 230px 0 120px;
+}
+.books-grid {
+    margin-top: 90px;
+}
+.book-item {
+    height: 660px;
+}
+.book-item-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+.book-item-img img {
+    width: 100%;
+    height: auto;
+}
+.book-info {
+    width: 50%;
+    color: #333;
+    flex-direction: column;
+    padding-left: 125px;
+}
+.book-title {
+    font-size: 25px;
+    color: #000000;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+.book-description {
+    max-height: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.book-order {
+    align-items: center;
+    align-self: center;
+    margin-top: auto;
+}
+
+.book-item + .book-item {
+    position: relative;
+    margin-top: 160px;
+    margin-bottom: 60px;
+}
+
+.book-item + .book-item:before {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 50%;
+    background: #0040c0;
+    top: -13%;
+    left: 25%;
+}
+
+@media (max-width: 1091px) {
+    .book-item {
+        height: 500px;
+    }
+    .book-title {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+    .book-info {
+        padding-left: 75px;
+    }
+    .book-description {
+        font-size: 16px;
+    }
+
+
+}
+@media (max-width: 767px) {
+    .books-store-page {
+        padding: 60px 0 80px;
+    }
+    .book-item {
+        flex-direction: column;
+        align-items: center;
+    }
+    .book-info {
+        padding: 0;
+        width: 100%;
+        margin-top: 75px;
+    }
+    .book-item + .book-item:before {
+        top: -20%;
+    }
+}
+
+
+
+/* ===== BOOKS END ===== */
 
 
 
